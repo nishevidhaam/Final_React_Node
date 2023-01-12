@@ -10,6 +10,8 @@ fs.createReadStream("./stud.csv")
   })
   .on("end", () => {
     result.sort((a,b) => a.Age - b.Age);
+    console.log(result);
+  function Average(){
     var length = result.length;
 
     const totalGrades = result.reduce(
@@ -20,7 +22,7 @@ fs.createReadStream("./stud.csv")
   var av = totalGrades / parseInt(length);
   console.log(`Average is ${av}`);
 }
-    console.log(result);
+  
     console.log(average)
     
   });
